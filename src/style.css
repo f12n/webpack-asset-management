@@ -1,3 +1,8 @@
+/* up is for scss: @import '../../styles/util'*/
+
+
+/* @import './_weight.scss'; */
+
 html,
 body {
     padding: 0;
@@ -16,9 +21,4 @@ body {
     src: url('./fonts/juicy_fruity_highlights-webfont.woff2') format('woff2'), url('./fonts/juicy_fruity_highlights-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-}
-
-.hello {
-    color: red;
-    font-family: 'juicy_fruity_highlightsRg';
 }
