@@ -13,3 +13,13 @@ TODO:
 1.aliasing: https://webpack.js.org/configuration/resolve/#resolve-alias
 2.image loading optimization：
 https://github.com/tcoopman/image-webpack-loader.git
+
+
+### loaders
+https://webpack.js.org/concepts/loaders/
+[ts-loader](https://github.com/TypeStrong/ts-loader)
+&& css-loader
+
+
+
+
