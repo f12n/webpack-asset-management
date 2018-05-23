@@ -19,7 +19,10 @@ https://github.com/tcoopman/image-webpack-loader.git
 https://webpack.js.org/concepts/loaders/
 [ts-loader](https://github.com/TypeStrong/ts-loader)
 && css-loader
+[sass-loader](https://webpack.js.org/loaders/sass-loader/)
 
+for(sass && scss, use) Sass-loader:
 
-
-
+### Install
+npm install sass-loader node-sass webpack --save-dev
+The sass-loader requires node-sass and webpack as peerDependency. Thus you are able to control the versions accurately.
