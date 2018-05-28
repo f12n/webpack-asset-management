@@ -28,6 +28,25 @@ module.exports = {
                     "css-loader", // translates CSS into CommonJS
                     "sass-loader" // compiles Sass to CSS
                 ]
+            }
+            /* , {
+                            test: /\.less$/,
+                            loader: 'less-loader' // compiles Less to CSS
+                        } */
+            , {
+                test: /\.less$/,
+                use: [{
+                    loader: 'style-loader'
+                }, {
+                    loader: 'css-loader'
+                }, {
+                    loader: 'less-loader'
+                        // ,options: {
+                        //     paths: [
+                        //         path.resolve(__dirname, 'node_modules')
+                        //     ]
+                        // }
+                }]
             }, {
                 test: /\.(png|svg|jpg|gif)$/,
                 use: ['file-loader']
