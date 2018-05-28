@@ -5,7 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // npx webpack --config webpack.config.js
 module.exports = {
     mode: 'development',
-    entry: './src/index.js',
+    devtool: 'cheap-module-eval-source-map',
+    entry: ["babel-polyfill", "./src/index.js"],
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
@@ -16,9 +17,6 @@ module.exports = {
     },
     module: {
         rules: [{
-                test: /\.(ts|tsx)$/,
-                use: 'ts-loader'
-            }, {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
             }, {
@@ -81,6 +79,9 @@ module.exports = {
                         presets: ['babel-preset-env', 'babel-preset-react']
                     }
                 }
+            }, {
+                test: /\.(ts|tsx)$/,
+                use: 'ts-loader'
             }
         ]
     },

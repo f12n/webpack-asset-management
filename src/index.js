@@ -1,11 +1,12 @@
+import 'babel-polyfill';
 import _ from 'lodash';
 import './style.css';
 // import Img from './image.jpg';
 import Data from './data.xml';
-import { printMe } from './print';
+import * as typescript from './typescript';
 import React from 'react';
 
-import { fuck, ReactApp, render } from './react/main';
+import { fuck, ReactApp, render } from './component';
 
 import './share';
 
@@ -33,7 +34,10 @@ function component(className) {
         element.appendChild(myImage); */
     return element;
 }
-printMe();
+console.log('typescript:', typescript);
+typescript.print();
+typescript.fuck();
+// print.printMe();
 fuck('Trump');
 
 document.body.appendChild(component());

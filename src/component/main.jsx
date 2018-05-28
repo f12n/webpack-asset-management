@@ -2,6 +2,9 @@ import { Component } from 'react';
 import React from 'react';
 
 import { render } from 'react-dom';
+import './mainStyle';
+import './sub.css';
+// import './sub2'     //failure
 
 export const fuck = (param) => {
   console.log('fuck you here', param || 'Trump');
@@ -27,8 +30,8 @@ export class ReactApp extends Component {
   render() {
     console.log('trigger render in ReactApp');
 
-    return (<div>fuck you Trump</div>);
+    return (<div className="man">fuck you Trump</div>);
   }
 }
 
-export { render } from 'react-dom';
+export { render } from 'react-dom'; 
