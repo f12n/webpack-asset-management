@@ -4,7 +4,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import './mainStyle';
 import './sub.css';
-// import './sub2'     //failure
+import './sub2.less';
 
 export const fuck = (param) => {
   console.log('fuck you here', param || 'Trump');

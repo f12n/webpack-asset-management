@@ -1,15 +1,22 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 // npx webpack --config webpack.config.js
 module.exports = {
-    mode: 'development',
+    // mode: 'development',
     devtool: 'cheap-module-eval-source-map',
-    entry: ["babel-polyfill", "./src/index.js"],
+    entry: {
+        app: './src/index.js'
+    },
     output: {
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
+    },
+    devServer: {
+        contentBase: './dist',
+        hot: true
     },
     resolve: {
         // Add `.ts` and `.tsx` as a resolvable extension.
@@ -89,6 +96,7 @@ module.exports = {
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             title: 'Development'
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin()
     ]
 };
